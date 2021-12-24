@@ -1,0 +1,18 @@
+.exchange-rate-currencies-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.exchange-rate-currency {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding: 2px;
+    border: 1px solid black;
+}
+
+.exchange-rate-error-message {
+    color: red;
+    padding: 5px;
+}

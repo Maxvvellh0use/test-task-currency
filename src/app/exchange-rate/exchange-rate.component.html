@@ -1,0 +1,8 @@
+<loading-indicator *ngIf="!(dataLoadedStream | async)"></loading-indicator>
+<div class="exchange-rate-error-message" *ngIf="(failedDataLoadingMessageStream  | async) != null">{{ failedDataLoadingMessageStream | async }}</div>
+<div *ngIf="dataLoadedStream | async" class="exchange-rate-currencies-container">
+    <div class="exchange-rate-currency" *ngFor="let currency of (currencyRatesStream | async)?.Valute">
+        <span>{{ currency.Name }}</span>
+        <span>{{ currency.Value }}</span>
+    </div>
+</div>
